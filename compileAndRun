@@ -1,0 +1,4 @@
+#!/bin/sh
+javac -classpath '.:REngine.jar:RserveEngine.jar' $1.java
+java -cp '.:REngine.jar:RserveEngine.jar' $1 
+
