@@ -26,14 +26,14 @@ public class testConnection {
             }
 
             REXP x;
-//            REXP m = c.eval("matrix(sample(0:1,100, rep=T),ncol=10)");
+            REXP m = c.eval("matrix(sample(0:1,100, rep=T),ncol=10)");
             System.out.println("Reading script...");
             File file = new File("Rcommands");
             try(BufferedReader br = new BufferedReader(new FileReader(file))) {
                 for(String line; (line = br.readLine()) != null; ) {
-                    System.out.println(line);
+//                    System.out.println(line);
                     x = c.eval(line);         // evaluates line in R
-                    System.out.println(x);    // prints result
+                    System.out.println(x.asString());    // prints result
                 }
             }
 
