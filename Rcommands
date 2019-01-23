@@ -1,4 +1,6 @@
+R.version.string
 2 + 2
 i <- 17
 i + 3
 "teststring"
+hello("Morpheus")
